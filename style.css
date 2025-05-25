@@ -1,0 +1,117 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  background-color: #000;
+  overflow: hidden;
+}
+.main {
+    color: white;
+  display: flex;
+  height: 100vh;
+}
+.sidebar {
+  width: 350px;
+  background-color: black;
+  border-radius: 1rem; /*16px */
+}
+.main-content {
+  background-color: #2c2c2c;
+  flex: 1;
+  border-radius: 1rem; /*16px */
+  overflow: auto;
+}
+.play {
+  position: fixed;
+  bottom: 0px;
+  height: 70px;
+  width: 100%;
+  background-color: black;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.nav {
+  height: 100px;
+  padding: 0.5rem 0.75rem; /* 8px 12px */
+  background-color: #111111;
+  border-radius: 1rem; /*16px */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 0.75rem;
+  margin-left: 0.5rem; /* 8px */
+  margin-right: 0.5rem; /* 8px */
+}
+.nav-option {
+  font-size: 1rem;
+  opacity: 70%;
+  padding: 0.5rem 0.75rem; /* 8px 12px */
+}
+.nav-option:hover {
+  opacity: 100%;
+}
+.nav-option a {
+  line-height: 1.5rem;
+}
+.nav-option i {
+  line-height: 1.25rem;
+  margin-right: 0.5rem; /* 8px */
+}
+.library {
+  padding: 0.5rem 0.75rem; /* 8px 12px */
+  background-color: #111111;
+  border-radius: 1rem; /*16px */
+  height: 100%;
+  margin-top: 0.75rem;
+  margin-left: 0.5rem; /* 8px */
+  margin-right: 0.5rem; /* 8px */
+}
+.options {
+  line-height: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.lib-options img {
+  height: 1.5rem; /* 16px */
+  width: 1.2rem; /* 12px */
+}
+.icons{
+    font-size: 1.25rem;
+   
+}
+.icons i{
+    opacity: 70%;
+    margin-right: 1rem; /* 16px */
+}
+.icons i:hover{
+    opacity: 100%;
+}
+.box{
+    border-radius: 1rem; /*16px */
+    background-color: #232323;
+    margin: 0.75rem 0 1.75rem 0;  /* 8px */
+    padding: 0.75rem 1rem; /* 8px 12px */
+    height: 8rem;   /* 160px */
+}
+.box-p1{
+    font-size: 1rem;
+    font-weight:    700;
+}
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 70%;
+}
+.box button{
+    width: fit-content;
+    height: 1.5rem; /* 24px */
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    color: black;
+    font-weight: 700;
+    padding: 0.25rem 1rem;
+}
