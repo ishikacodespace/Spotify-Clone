@@ -6,22 +6,23 @@ body {
   overflow: hidden;
 }
 .main {
-    color: white;
+  color: white;
   display: flex;
   height: 100vh;
 }
 .sidebar {
-  width: 350px;
+  width: 355px;
   background-color: black;
   border-radius: 1rem; /*16px */
 }
 .main-content {
-  background-color: #2c2c2c;
+  background-color: black;
   flex: 1;
   border-radius: 1rem; /*16px */
   overflow: auto;
+  padding: 0 1.5rem ;  /* 24px */
 }
-.play {
+.music-player {
   position: fixed;
   bottom: 0px;
   height: 70px;
@@ -47,7 +48,7 @@ a {
 .nav-option {
   font-size: 1rem;
   opacity: 70%;
-  padding: 0.5rem 0.75rem; /* 8px 12px */
+  padding: 0.5rem 0.5rem; /* 8px 12px */
 }
 .nav-option:hover {
   opacity: 100%;
@@ -60,7 +61,7 @@ a {
   margin-right: 0.5rem; /* 8px */
 }
 .library {
-  padding: 0.5rem 0.75rem; /* 8px 12px */
+  padding: 0.5rem 0.5rem; /* 8px 12px */
   background-color: #111111;
   border-radius: 1rem; /*16px */
   height: 100%;
@@ -78,40 +79,158 @@ a {
 .lib-options img {
   height: 1.5rem; /* 16px */
   width: 1.2rem; /* 12px */
+  margin-right: 0.5rem;
 }
-.icons{
-    font-size: 1.25rem;
-   
+.icons {
+  font-size: 1.25rem;
 }
-.icons i{
-    opacity: 70%;
-    margin-right: 1rem; /* 16px */
+.icons i {
+  opacity: 70%;
+  margin-right: 1rem; /* 16px */
 }
-.icons i:hover{
-    opacity: 100%;
+.icons i:hover {
+  opacity: 100%;
 }
-.box{
-    border-radius: 1rem; /*16px */
+.box {
+  border-radius: 1rem; /*16px */
+  background-color: #232323;
+  margin: 0.75rem 0 1.75rem 0; /* 8px */
+  padding: 0.75rem 1rem; /* 8px 12px */
+height: 8rem; /* 128px */
+}
+.box-p1 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.box-p2 {
+  font-size: 0.85rem;
+  opacity: 70%;
+}
+.box button, .nav-item{
+  width: fit-content;
+  height: 1.5rem; /* 24px */
+  background-color: white;
+  border: none;
+  border-radius: 100px;
+  color: rgb(216, 210, 210);
+  font-weight: 700;
+  padding: 0.25rem 1rem;
+}
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background-color: black;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 1rem 0rem;
+ z-index: 1; /* Ensure it stays on top */
+}
+.sticky-nav-icons img{
+  margin-left: 0.5rem; /* 8px */
+}
+.sticky-nav-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 0.5rem; /* 8px */
+}
+.nav-item{
+  color: black;
+  margin-right: 0.5rem; /* 8px */
+  }
+  .dark-badge{
+    background-color: #111111;
+    color: white;
+  }
+
+  @media (max-width: 1000px) {
+   .hide{
+    display: none;
+   }
+  }
+  .card{
+    color: white;
     background-color: #232323;
-    margin: 0.75rem 0 1.75rem 0;  /* 8px */
-    padding: 0.75rem 1rem; /* 8px 12px */
-    height: 8rem;   /* 160px */
+    width: 10rem;
+     padding: 1rem;
+     margin-left: 1.5rem;
+margin-top: 1rem;
+  }
+  .cards-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-image{
+    width: 100%;
+    border-radius: 0.5rem; /*16px */
+ }
+ .card-title{
+  margin-top: 0.5rem;
+    font-weight: 600;
+ }
+ .card-info{
+  font-size: 0.75rem; /* 8px */
+  opacity: 70%;
+ }
+.footer{
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.box-p1{
-    font-size: 1rem;
-    font-weight:    700;
+.line{
+  height: 30%;
+  width: 100% ;
+border-top: 1px solid white;
+ opacity: 0.5;
 }
-.box-p2{
-    font-size: 0.85rem;
-    opacity: 70%;
+.music-player{
+  display: flex;
+  justify-content: space-between;
 }
-.box button{
-    width: fit-content;
-    height: 1.5rem; /* 24px */
-    background-color: white;
-    border: none;
-    border-radius: 100px;
-    color: black;
-    font-weight: 700;
-    padding: 0.25rem 1rem;
+.album{
+  width: 25%;
+}
+.player{
+  width: 50%;
+}
+.controls{
+  width: 25%;
+}
+.player-controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player-control-icon{
+  height: 1rem;
+  margin-right: 2rem;
+  opacity: 70%;
+}
+.player-control-icon:hover{
+  opacity: 100%;
+}
+.playback-bar{
+  display: flex ;
+  align-items: center;    
+  justify-content: center;
+}
+.progress-bar{
+  width: 70%;
+  margin: 0 1rem;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.progress-bar::-webkit-slider-runnable-track{
+  background-color: #ddd;
+  height: 0.2rem; /* 4px */
+}
+.progress-bar::-webkit-slider-thumb{
+  width: 1rem; /* 8px */
+  height: 1rem; /* 8px */
+  background-color: white;
+  border-radius: 50%;
+  margin-top: -6px; /* 8px */
 }
